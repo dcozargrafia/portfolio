@@ -1,0 +1,317 @@
+/* ===================================
+   Portfolio - Daniel Cózar
+   =================================== */
+
+/* === VARIABLES === */
+:root {
+  /* Fondo oscuro con tinte verde */
+  --color-bg: #121512;
+  --color-bg-alt: #1a1f1a;
+
+  /* Texto en tonos verdes claros */
+  --color-text: #d4ddd4;
+  --color-text-muted: #8a9a8a;
+
+  /* Acento - el verde del logo */
+  --color-accent: #7a8f7a;
+  --color-accent-hover: #9aab9a;
+
+  --color-border: #2a352a;
+
+  /* Tipografía */
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+
+  /* Otros */
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* === RESET / BASE === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* === LAYOUT === */
+
+/* === HERO === */
+
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: var(--spacing-md);
+}
+
+#hero h1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+#hero p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+#hero ul {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+#hero ul a {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+#hero ul a:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* === SOBRE MÍ === */
+
+#about-me {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-sm);
+}
+
+#about-me h2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+#about-me p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+  /* text-align: center; */
+}
+
+/* === TECH STACK === */
+#tech-stack {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-sm);
+}
+
+#tech-stack h2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.tech-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.tech-category h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tech-category ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.tech-category ul li {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius);
+  font-size: var(--font-size-sm);
+}
+
+.tech-category ul li:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* === PROYECTOS === */
+
+#projects {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-sm);
+}
+
+#projects h2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+#projects article {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  transition: var(--transition);
+}
+
+#projects article:hover {
+  border-color: var(--color-accent);
+}
+
+#projects article h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+#projects article p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.project-technologies {
+  margin-top: var(--spacing-sm);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.project-technologies li {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius);
+  font-size: var(--font-size-sm);
+  transition: var(--transition);
+}
+
+.project-technologies li:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.project-links {
+  margin-top: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.project-links a {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.project-links a:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* === FOOTER === */
+
+footer {
+  text-align: center;
+  padding: var(--spacing-md);
+
+  margin-top: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* === ANIMACIONES === */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .tech-categories,
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+  #hero h1 {
+    font-size: var(--font-size-2xl);
+  }
+  #logo {
+    width: 100px;
+    height: 100px;
+  }
+}

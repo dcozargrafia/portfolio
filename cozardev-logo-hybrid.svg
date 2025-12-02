@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Importar fuentes -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=Permanent+Marker&amp;display=swap');
+    </style>
+  </defs>
+  
+  <!-- Blob estilo logo original -->
+  <path 
+    d="M50,35
+       C80,25 140,22 165,45
+       C190,68 188,110 180,145
+       C172,180 130,190 90,185
+       C50,180 20,155 15,115
+       C10,75 20,45 50,35Z" 
+    fill="#7a8f7a"
+  />
+  
+  <!-- Llave izquierda -->
+  <text 
+    x="30" 
+    y="115" 
+    font-family="'Space Grotesk', sans-serif" 
+    font-size="28" 
+    font-weight="700"
+    fill="#1a1f1a"
+  >{</text>
+  
+  <!-- CozarDev en handwritten -->
+  <text 
+    x="100" 
+    y="115" 
+    font-family="'Permanent Marker', cursive" 
+    font-size="24" 
+    fill="#1a1f1a" 
+    text-anchor="middle"
+  >CozarDev</text>
+  
+  <!-- Llave derecha -->
+  <text 
+    x="165" 
+    y="115" 
+    font-family="'Space Grotesk', sans-serif" 
+    font-size="28" 
+    font-weight="700"
+    fill="#1a1f1a"
+  >}</text>
+</svg>
